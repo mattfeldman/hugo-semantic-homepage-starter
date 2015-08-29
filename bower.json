@@ -8,5 +8,9 @@
     "static",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.0.8",
+    "waypoints": "jquery-waypoints#~4.0.0"
+  }
 }
