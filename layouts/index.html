@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Site.Title}}</title>
+    <link rel="stylesheet" type="text/css" href='/assets/semantic/dist/semantic.min.css'/>
+    <link rel="stylesheet" type="text/css" href='/css/homepage.css'/>
+</head>
+<body class="pushable">
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            {{partial "menu" .}}
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Log in</a>
+                </div>
+                <div class="item">
+                    <a class="ui primary button">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu left">
+        {{partial "menu" .}}
+        <a class="item">Login</a>
+        <a class="item">Signup</a>
+    </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher">
+        {{partial "masthead" .}}
+        {{partial "work" .}}
+        {{partial "quotes" .}}
+        {{partial "features" .}}
+        {{partial "footer" .}}
+    </div>
+
+    <script src="/assets/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/semantic/dist/semantic.min.js"></script>
+    <script src="/assets/slick/dist/slick.min.js"></script>
+    <script src="/assets/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            {{template "partials/scripts/masthead.js"}}
+            {{template "partials/scripts/waypoints.js"}}
+            {{template "partials/scripts/scroll-to-anchor.js"}}
+        });
+    </script>
+</body>
+</html>
